@@ -1,4 +1,4 @@
-package org.APCSA2023;
+package Main;
 
 public class Main {
     public static void main(String[] args) {
