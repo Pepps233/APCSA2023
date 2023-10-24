@@ -33,8 +33,6 @@ public class StudentAverages {
         // outputs content to output file
         System.out.println("------------Output------------");
         readFileHandler.output(myFile);
-        // calls close file method => closes the scanner within ReadFile class
-        readFileHandler.closeScanner();
         // closes scanner and file object initialized within main
         closeAll(inputScanner, myFile);
     }

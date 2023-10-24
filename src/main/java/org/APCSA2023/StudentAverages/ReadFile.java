@@ -8,15 +8,12 @@ public class ReadFile {
     private Scanner inputScanner;
     private File inputFile;
 
-    private FileWriter outputFile;
-
     public ReadFile(File inputFile) throws FileNotFoundException {
         // inputFile will be used later for printing out the contents
         this.inputFile = inputFile;
         this.inputScanner = new Scanner(inputFile);
     }
     public void output(FileWriter outputFile) {
-        this.outputFile = outputFile;
         String temporaryString = "";
         // holds the total score of a student
         int totalIndividualScore = 0;
@@ -54,7 +51,11 @@ public class ReadFile {
                 }
             }
         }
+        // outputs information onto both file and console
         printResultFile(nameList, scoreList, scoreList.size(), outputFile);
+        printResultConsole(nameList, scoreList, scoreList.size());
+        // closes existing scanners within this class
+        closeScanner();
     }
 
     public void closeScanner() {
@@ -82,7 +83,7 @@ public class ReadFile {
         output.close();
     }
 
-    // creates new output file based off name
+    // creates new output file based off name given by user
     public static FileWriter createOutputFile(String fileName) throws IOException {
         FileWriter myFile = new FileWriter(fileName);
         return myFile;
