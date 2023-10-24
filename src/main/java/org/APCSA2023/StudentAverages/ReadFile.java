@@ -1,20 +1,22 @@
 package org.APCSA2023.StudentAverages;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ReadFile {
-    // driver class doesn't need to see this variable
     private Scanner inputScanner;
     private File inputFile;
+
+    private FileWriter outputFile;
+
     public ReadFile(File inputFile) throws FileNotFoundException {
         // inputFile will be used later for printing out the contents
         this.inputFile = inputFile;
         this.inputScanner = new Scanner(inputFile);
     }
-    public void output() {
+    public void output(FileWriter outputFile) {
+        this.outputFile = outputFile;
         String temporaryString = "";
         // holds the total score of a student
         int totalIndividualScore = 0;
@@ -52,10 +54,10 @@ public class ReadFile {
                 }
             }
         }
-        printResult(nameList, scoreList, scoreList.size());
+        printResultFile(nameList, scoreList, scoreList.size(), outputFile);
     }
 
-    public void closeFile() {
+    public void closeScanner() {
         inputScanner.close();
     }
 
@@ -64,11 +66,26 @@ public class ReadFile {
         return Math.round((float)total / count);
     }
 
-    // outputs average score
-    public void printResult(ArrayList<String> nameList, ArrayList<Integer> scoreList, int size) {
+    // outputs average score to console
+    public void printResultConsole(ArrayList<String> nameList, ArrayList<Integer> scoreList, int size) {
         for (int i = 0; i < size; i++) {
             System.out.println(nameList.get(i) + ", average = " + scoreList.get(i));
         }
+    }
+
+    // outputs average score to file
+    public void printResultFile(ArrayList<String> nameList, ArrayList<Integer> scoreList, int size, FileWriter file) {
+        PrintWriter output = new PrintWriter(file);
+        for (int i = 0; i < size; i++) {
+            output.println(nameList.get(i) + ", average = " + scoreList.get(i));
+        }
+        output.close();
+    }
+
+    // creates new output file based off name
+    public static FileWriter createOutputFile(String fileName) throws IOException {
+        FileWriter myFile = new FileWriter(fileName);
+        return myFile;
     }
 
     // outputs the input file
@@ -77,6 +94,7 @@ public class ReadFile {
         while(printFileScanner.hasNextLine()) {
             System.out.println(printFileScanner.nextLine());
         }
+        printFileScanner.close();
     }
 
     // switches input file
