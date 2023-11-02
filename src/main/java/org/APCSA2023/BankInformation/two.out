@@ -1,0 +1,15 @@
+firstName   |  middle  |  lastName    |  bank   |  bankID  |  balance  
+-----------------------------------------------------------------------
+John        |          |  Smith       |  BUS    |  178     |  1,000.000
+Okonkwo     |  James   |  Bush        |  BUS    |  892     |  100,000.000
+Naruto      |          |  Uzumaki     |  BUS    |  102     |  1,999.000
+Monkey      |  D       |  Luffy       |  BUS    |  202     |  10,000,000.000
+Rose        |          |  Abbott      |  BUS    |  928     |  10,000.000
+Kaitlyn     |  Thomas  |  Crawford    |  BUS    |  9827    |  10,000.000
+Ted         |  Peter   |  Orozco      |  BUS    |  202     |  99.870   
+Tasneem     |          |  Mathis      |  BUS    |  9000    |  191,292.000
+Emory       |  Andrew  |  Tate        |  BUS    |  2938    |  1,000,000.000
+Brogan      |          |  Walton      |  BUS    |  9872    |  0.000    
+Nicola      |          |  Mcclain     |  BUS    |  9872    |  0.000    
+Dillan      |          |  Ayers       |  BUS    |  9879    |  100.750  
+Sasuke      |          |  Uchiha      |  BUS    |  1923    |  928,393.000

@@ -1,0 +1,13 @@
+Jiale Yu
+Wednesday, November 1, 2023
+APCS-A
+
+This program will read information from an input file regarding the bank information and personal information of each line.
+And then output it to two separate files, each file representing a bank service.
+
+- output file one should hold BOC
+- output file two should hold BUS
+
+Structure(input): firstName (middleName) lastName firstBank firstBankAccountNumber firstBankBalance secondBank secondBankAccountNumber secondBankBalance
+
+The output would be properly organized and managed
