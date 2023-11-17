@@ -1,4 +1,4 @@
-firstName   |  middle  |  lastName    |  bank   |  bankID  |  balance  
+first       |  middle  |  last        |  bank   |  bankID  |  balance  
 -----------------------------------------------------------------------
 John        |          |  Smith       |  BUS    |  178     |  1,000.000
 Okonkwo     |  James   |  Bush        |  BUS    |  892     |  100,000.000

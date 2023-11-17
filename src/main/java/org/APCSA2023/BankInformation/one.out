@@ -1,4 +1,4 @@
-firstName   |  middle  |  lastName    |  bank   |  bankID  |  balance  
+first       |  middle  |  last        |  bank   |  bankID  |  balance  
 -----------------------------------------------------------------------
 Kermit      |  The     |  Frog        |  BOC    |  100     |  1,000,000.000
 Kermit      |          |  Swish       |  BOC    |  222     |  50.000   
@@ -16,3 +16,4 @@ Nicola      |          |  Mcclain     |  BOC    |  9873    |  0.000
 Jaydon      |          |  Holden      |  BOC    |  1237    |  9,876.540
 Joe         |          |  Asen        |  BOC    |  8972    |  93,492.000
 Sasuke      |          |  Uchiha      |  BOC    |  1929    |  988.000  
+Hugh        |          |  Jass        |  BOC    |  9983    |  191,919.000
