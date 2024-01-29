@@ -20,4 +20,9 @@ public class Chimpanzee extends Mammal{
     public void action() {
         System.out.println(name + " is climbing a tree!");
     }
+
+    @Override
+    public String toString() {
+        return "From Chimpanzee";
+    }
 }

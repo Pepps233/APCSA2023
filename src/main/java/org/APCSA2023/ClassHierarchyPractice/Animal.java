@@ -16,4 +16,9 @@ public class Animal {
     public void displayInfo() {
         System.out.println("The specie of this animal is: " + species);
     }
+
+    @Override
+    public String toString() {
+        return "From Animal";
+    }
 }

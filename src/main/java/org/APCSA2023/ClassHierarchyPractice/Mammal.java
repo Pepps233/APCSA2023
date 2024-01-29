@@ -20,4 +20,9 @@ public class Mammal extends Animal{
     public void walk() {
         System.out.println("The " + species + " is walking around with " + numLegs + " legs!");
     }
+
+    @Override
+    public String toString() {
+        return "From Mammal";
+    }
 }
