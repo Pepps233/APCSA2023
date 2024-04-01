@@ -25,7 +25,7 @@ public class MonthsHelper {
                 middleString = months.get(middleIndex);
             }
             // if target string is less than middle string
-            if(target.compareTo(middleString) < 0) {
+            else {
                 // move highest to left of middle and continue searching
                 highest = middleIndex - 1;
                 middleIndex = getMiddleIndex(lowest, highest);
