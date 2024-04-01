@@ -21,16 +21,14 @@ public class MonthsHelper {
             if(target.compareTo(middleString) > 0) {
                 // move lowest to right of middle and continue searching
                 lowest = middleIndex + 1;
-                middleIndex = getMiddleIndex(lowest, highest);
-                middleString = months.get(middleIndex);
             }
             // if target string is less than middle string
             else {
                 // move highest to left of middle and continue searching
                 highest = middleIndex - 1;
-                middleIndex = getMiddleIndex(lowest, highest);
-                middleString = months.get(middleIndex);
             }
+            middleIndex = getMiddleIndex(lowest, highest);
+            middleString = months.get(middleIndex);
         }
         // did not find the target
         return -1;
