@@ -1,4 +1,4 @@
-# commands:
+# Commands:
 
 ## info:
 
@@ -25,3 +25,16 @@ absolute path of a file to open and process
 "clear": clears all pre-processed and processed contents
 
 "pep accountNum -d/-w amount": using the account number, deposit or withdraw money
+
+
+# For grading
+### Interface: FileIO
+### Inheritance: BankAccount (superclass) and CheckingAccount, Savings Account (both subclasses)
+### Sorting: BankHelper (insertion sort)
+### R/W File: FileIO and FileInput, FileOutput (both implement FileIO)
+### ArrayList: Constants (pre-processed array list and processed array list)
+### Binary Search: BankHelper
+### User Interface: UIInputHandler
+### Tester: Tester
+### Input Files: InputFile, InputFileTwo
+### Other: BankRequestHandler

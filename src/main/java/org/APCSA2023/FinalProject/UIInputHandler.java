@@ -101,6 +101,7 @@ public class UIInputHandler extends JFrame implements ActionListener {
         // if button is clicked
         switch (s) {
             case "submit info" -> {
+                // if user entry starts with pep, it means that it is a command
                 if (jTextField.getText().startsWith("pep")) {
                     String request = jTextField.getText();
                     BankRequestHandler.bankAccCreationHandler(request);
@@ -111,6 +112,7 @@ public class UIInputHandler extends JFrame implements ActionListener {
             }
             case "submit path" -> {
                 String filePath;
+                // if the input is not empty
                 if (!jTextFieldTwo.getText().isEmpty()) {
                     if (jTextFieldTwo.getText().equalsIgnoreCase("default")) {
                         filePath = "/Users/pep233/IdeaProjects/APCS-A_2023_JialeYu/src/main/java/org/APCSA2023/FinalProject/InputFile";
@@ -118,7 +120,9 @@ public class UIInputHandler extends JFrame implements ActionListener {
                         filePath = jTextFieldTwo.getText().toLowerCase();
                     }
                     Constants.FILE_PATH = filePath;
+                    // process and return a pre-processed array list
                     fi.processInputFile();
+                    // process the pre-processed array list and return an array list of bank account objects
                     fi.process();
                 } else {
                     System.out.println("path is empty. 'default' to access default path");
