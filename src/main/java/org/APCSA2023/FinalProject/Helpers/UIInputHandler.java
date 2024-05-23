@@ -120,7 +120,7 @@ public class UIInputHandler extends JFrame implements ActionListener {
                 // if the input is not empty
                 if (!jTextFieldTwo.getText().isEmpty()) {
                     if (jTextFieldTwo.getText().equalsIgnoreCase("default")) {
-                        filePath = "/Users/pep233/IdeaProjects/APCS-A_2023_JialeYu/src/main/java/org/APCSA2023/FinalProject/InputFile";
+                        filePath = "/Users/pep233/IdeaProjects/APCS-A_2023_JialeYu/src/main/java/org/APCSA2023/FinalProject/InputFiles/InputFile";
                     } else {
                         filePath = jTextFieldTwo.getText().toLowerCase();
                     }
