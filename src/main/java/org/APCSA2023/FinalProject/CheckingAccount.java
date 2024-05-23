@@ -14,13 +14,17 @@ public class CheckingAccount extends BankAccount {
 
     @Override
     public void withdraw(double amount) {
-        if(!(amount > withdrawLimit) && !(amount > getBalance())) {
+        if (!(amount > withdrawLimit) && !(amount > getBalance())) {
             super.withdraw(amount);
+            System.out.println("withdrew " + amount + "$ from " + this.getName());
+        }
+        else {
+            System.out.println("withdraw amount exceeded the limit!");
         }
     }
 
     public void applyInterest() {
-        double amount = getBalance() * Math.pow((1 + (ratePYear/365)), 365);
+        double amount = getBalance() * Math.pow((1 + (ratePYear / 365)), 365);
         super.setBalance(amount);
     }
 }

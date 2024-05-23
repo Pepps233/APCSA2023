@@ -13,6 +13,7 @@ public class BankAccount {
 
     public void deposit(double amount) {
         bal += amount;
+        System.out.println("deposited " + amount + "$ to " + this.getName());
     }
 
     public void withdraw(double amount) {

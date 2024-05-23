@@ -6,13 +6,13 @@ import java.io.IOException;
 public class FileOutput implements FileIO {
 
     public static void printRawList() {
-        for(String i: Constants.PRE_PROCESSED_STRINGS) {
+        for (String i : Constants.PRE_PROCESSED_STRINGS) {
             System.out.println(i);
         }
     }
 
     public static void printProcessedList() {
-        for(BankAccount i: Constants.PROCESSED_OBJECTS) {
+        for (BankAccount i : Constants.PROCESSED_OBJECTS) {
             System.out.println(i.toString());
         }
         System.out.println("\n" + "------------------------------" + "\n");
@@ -21,7 +21,7 @@ public class FileOutput implements FileIO {
     public static void outputToFile() {
         try {
             FileWriter myWriter = new FileWriter("output.txt");
-            for(BankAccount ba: Constants.PROCESSED_OBJECTS) {
+            for (BankAccount ba : Constants.PROCESSED_OBJECTS) {
                 myWriter.write(ba.toString());
                 myWriter.write("\n");
             }

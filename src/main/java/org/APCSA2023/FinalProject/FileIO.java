@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public interface FileIO{
+public interface FileIO {
     default void readIn() {
         try {
             File myObj = new File(Constants.FILE_PATH);
@@ -16,6 +16,7 @@ public interface FileIO{
             myReader.close();
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred while opening file");
+            System.out.println("Try an another file");
             e.printStackTrace();
         }
     }

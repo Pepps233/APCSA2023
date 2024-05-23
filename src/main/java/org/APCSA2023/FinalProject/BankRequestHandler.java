@@ -11,17 +11,14 @@ public class BankRequestHandler {
         String[] tempArray = request.split(" ");
         int accountNumber = Integer.parseInt(tempArray[1]);
         double amount = Double.parseDouble(tempArray[3]);
-        String operation = tempArray[2].equals("-d")? "deposit" : "withdraw";
+        String operation = tempArray[2].equals("-d") ? "deposit" : "withdraw";
         int key = BankHelper.searchAccount(accountNumber);
 
-        if(key != -1) {
-            if(operation.equals("deposit")) {
+        if (key != -1) {
+            if (operation.equals("deposit")) {
                 Constants.PROCESSED_OBJECTS.get(key).deposit(amount);
-                System.out.println("deposited " + amount + "$ to " + Constants.PROCESSED_OBJECTS.get(key).getName());
-            }
-            else {
+            } else {
                 Constants.PROCESSED_OBJECTS.get(key).withdraw(amount);
-                System.out.println("deposited " + amount + "$ from " + Constants.PROCESSED_OBJECTS.get(key).getName());
             }
         }
     }
@@ -33,16 +30,13 @@ public class BankRequestHandler {
         double accountBalance = Double.parseDouble(tempArray[3]);
         String accountType = tempArray[4];
         BankAccount ba;
-        if(accountType.equalsIgnoreCase("checking")) {
+        if (accountType.equalsIgnoreCase("checking")) {
             ba = new CheckingAccount(firstName + " " + lastName, Constants.ACCOUNT_NUMBER, accountBalance);
-            System.out.println("Created new account");
-            System.out.println(ba);
-        }
-        else {
+        } else {
             ba = new SavingsAccount(firstName + " " + lastName, Constants.ACCOUNT_NUMBER, accountBalance);
-            System.out.println("Created new account");
-            System.out.println(ba);
         }
+        System.out.println("Created new account");
+        System.out.println(ba);
         Constants.PROCESSED_OBJECTS.add(ba);
         Constants.ACCOUNT_NUMBER++;
     }

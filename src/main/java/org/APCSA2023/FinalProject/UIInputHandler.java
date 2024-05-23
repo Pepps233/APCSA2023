@@ -33,8 +33,7 @@ public class UIInputHandler extends JFrame implements ActionListener {
     private static FileInput fi;
 
     // only needs to be called once
-    public static void initUI()
-    {
+    public static void initUI() {
         fi = new FileInput();
         // create a new frame to store text field and button
         jFrame = new JFrame("Input");
@@ -94,6 +93,7 @@ public class UIInputHandler extends JFrame implements ActionListener {
 
         jFrame.setVisible(true);
     }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         // button clicked status
@@ -101,17 +101,16 @@ public class UIInputHandler extends JFrame implements ActionListener {
         // if button is clicked
         switch (s) {
             case "submit info" -> {
-                if(jTextField.getText().startsWith("pep")) {
+                if (jTextField.getText().startsWith("pep")) {
                     String request = jTextField.getText();
                     BankRequestHandler.bankAccCreationHandler(request);
-                }
-                else {
+                } else {
                     System.out.println("not a valid command. this is used for creating accounts.");
                     System.out.println("valid command: pep firstName lastName accountBalance accountType");
                 }
             }
             case "submit path" -> {
-                String filePath = "";
+                String filePath;
                 if (!jTextFieldTwo.getText().isEmpty()) {
                     if (jTextFieldTwo.getText().equalsIgnoreCase("default")) {
                         filePath = "/Users/pep233/IdeaProjects/APCS-A_2023_JialeYu/src/main/java/org/APCSA2023/FinalProject/InputFile";
@@ -126,7 +125,7 @@ public class UIInputHandler extends JFrame implements ActionListener {
                 }
             }
             case "submit request" -> {
-                if (jTextFieldThree.getText().equals("stop")) Tester.end();
+                if (jTextFieldThree.getText().equals("end")) Tester.end();
                 else if (jTextFieldThree.getText().equals("show")) FileOutput.printProcessedList();
                 else if (jTextFieldThree.getText().equals("output")) FileOutput.outputToFile();
                 else if (jTextFieldThree.getText().equals("sort balance")) BankHelper.sortByBalance();
@@ -134,13 +133,11 @@ public class UIInputHandler extends JFrame implements ActionListener {
                 else if (jTextFieldThree.getText().startsWith("pep")) {
                     String request = jTextFieldThree.getText();
                     BankRequestHandler.bankRequestHandler(request);
-                }
-                else if (jTextFieldThree.getText().equals("clear")) {
+                } else if (jTextFieldThree.getText().equals("clear")) {
                     Constants.PROCESSED_OBJECTS.clear();
                     Constants.PRE_PROCESSED_STRINGS.clear();
                     Constants.ACCOUNT_NUMBER = 0;
-                }
-                else {
+                } else {
                     System.out.println("not a valid command");
                 }
             }

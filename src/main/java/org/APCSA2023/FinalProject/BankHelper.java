@@ -13,7 +13,7 @@ public class BankHelper {
         // counter
         int j;
 
-        for(int i = 1; i < size; i++) {
+        for (int i = 1; i < size; i++) {
             // set current to first element, then advances forward
             currentAccount = Constants.PROCESSED_OBJECTS.get(i);
             currentBalance = currentAccount.getBalance();
@@ -24,16 +24,16 @@ public class BankHelper {
              * if current element is smaller than last one, push the element back and decrement i to check
              * element before it again
              */
-            while((j >= 0) && (currentBalance < Constants.PROCESSED_OBJECTS.get(j).getBalance())) {
+            while ((j >= 0) && (currentBalance < Constants.PROCESSED_OBJECTS.get(j).getBalance())) {
                 Constants.PROCESSED_OBJECTS.add(j, currentAccount);
-                Constants.PROCESSED_OBJECTS.remove(j+2);
+                Constants.PROCESSED_OBJECTS.remove(j + 2);
                 j--;
             }
         }
     }
 
     /**
-     * Insertion sort to sort the bank accounts by balance
+     * Insertion sort to sort the bank accounts by account number
      */
     public static void sortByAccountNum() {
         int size = Constants.PROCESSED_OBJECTS.size();
@@ -43,7 +43,7 @@ public class BankHelper {
         // counter
         int j;
 
-        for(int i = 1; i < size; i++) {
+        for (int i = 1; i < size; i++) {
             // set current to first element, then advances forward
             currentAccount = Constants.PROCESSED_OBJECTS.get(i);
             currentAccNum = currentAccount.getAccountNum();
@@ -54,9 +54,9 @@ public class BankHelper {
              * if current element is smaller than last one, push the element back and decrement i to check
              * element before it again
              */
-            while((j >= 0) && (currentAccNum < Constants.PROCESSED_OBJECTS.get(j).getAccountNum())) {
+            while ((j >= 0) && (currentAccNum < Constants.PROCESSED_OBJECTS.get(j).getAccountNum())) {
                 Constants.PROCESSED_OBJECTS.add(j, currentAccount);
-                Constants.PROCESSED_OBJECTS.remove(j+2);
+                Constants.PROCESSED_OBJECTS.remove(j + 2);
                 j--;
             }
         }
@@ -66,7 +66,7 @@ public class BankHelper {
      * Binary search the account numbers and find the index of the account in the array list
      */
     public static int searchAccount(int key) {
-        int highest = Constants.PROCESSED_OBJECTS.size() -1;
+        int highest = Constants.PROCESSED_OBJECTS.size() - 1;
         int lowest = 0;
         int middleIndex;
         int middleAccNumber;
@@ -74,13 +74,13 @@ public class BankHelper {
         middleAccNumber = Constants.PROCESSED_OBJECTS.get(middleIndex).getAccountNum();
 
         /* use <= b/c if arr only contains 2 elements, it will not be checked */
-        while(lowest <= highest) {
+        while (lowest <= highest) {
             // if the target string is found
-            if(key == middleAccNumber) {
+            if (key == middleAccNumber) {
                 return middleIndex;
             }
             // if target string is greater than middle string
-            if(key > middleAccNumber) {
+            if (key > middleAccNumber) {
                 // move lowest to right of middle and continue searching
                 lowest = middleIndex + 1;
             }
