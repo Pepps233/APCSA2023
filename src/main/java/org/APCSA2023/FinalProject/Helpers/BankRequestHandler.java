@@ -1,4 +1,9 @@
-package org.APCSA2023.FinalProject;
+package org.APCSA2023.FinalProject.Helpers;
+
+import org.APCSA2023.FinalProject.Accounts.BankAccount;
+import org.APCSA2023.FinalProject.Accounts.CheckingAccount;
+import org.APCSA2023.FinalProject.Accounts.SavingsAccount;
+import org.APCSA2023.FinalProject.Constants.Constants;
 
 public class BankRequestHandler {
 

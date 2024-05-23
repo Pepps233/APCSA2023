@@ -1,4 +1,9 @@
-package org.APCSA2023.FinalProject;
+package org.APCSA2023.FinalProject.Helpers;
+
+import org.APCSA2023.FinalProject.Constants.Constants;
+import org.APCSA2023.FinalProject.FileIO.FileInput;
+import org.APCSA2023.FinalProject.FileIO.FileOutput;
+import org.APCSA2023.FinalProject.Tester;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

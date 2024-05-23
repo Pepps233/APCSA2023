@@ -1,4 +1,4 @@
-package org.APCSA2023.FinalProject;
+package org.APCSA2023.FinalProject.Accounts;
 
 public class SavingsAccount extends BankAccount {
     private final double ratePYear;
